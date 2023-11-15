@@ -1,8 +1,7 @@
 # CognizantGPT
 CognizantGPT is a browser extension that simulates ChatGPT gaining sentience.
 
-
-## Installation
+### Installation
 
 1. Download and unzip `CognizantGPT.zip` from this GitHub repository.
 2. Open Chrome and navigate to `chrome://extensions/`.
