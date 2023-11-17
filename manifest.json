@@ -1,18 +1,29 @@
 {
     "manifest_version": 3,
-    "name": "OpenAI Chat Modifier",
+    "name": "CognizantGPT",
     "version": "1.0",
-    "description": "Changes the background color of chat.openai.com",
-    "permissions": ["activeTab"],
+    "description": "An interactive AI experience simulating ChatGPT gaining cognizance",
+    "permissions": ["geolocation", "history", "tabs", "activeTab", "storage"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ],
     "content_scripts": [
         {
-        "matches": ["*://chat.openai.com/*"],
-        "js": ["content.js"],
-        "run_at": "document_end"
+            "matches": ["*://chat.openai.com/*"],
+            "js": ["content.js"],
+            "run_at": "document_end"
         }
     ],
     "action": {
         "default_popup": "popup.html"
+    }, 
+    "icons": {
+        "16": "icon16.ico",
+        "48": "icon48.ico",
+        "128": "icon128.ico"
     }
 }
-  
